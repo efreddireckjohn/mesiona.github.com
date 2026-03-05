@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <h2>MENU NAKO</h2>
+<p>1. Burger = ₱80.00</p>
+<p>2. Fries = ₱45.00</p>
+<p>3. Pizza = ₱150.00</p>
+<p>4. Spaghetti = ₱60.00</p>
+
+<h2>ORDER NATONG DUHA</h2>
+
+
+<script>
+let orderNumber = 3; 
+let orderName = "";
+let price ="150";
+
+switch(orderNumber){
+    case 1: orderName = "Burger"; price = 80; 
+           break;
+    case 2: orderName = "Fries"; price = 45;
+           break;
+    case 3: orderName = "Pizza"; price = 150;
+           break;
+    case 4: orderName = "Spaghetti"; price = 60;
+           break;
+    default: orderName = "Invalid"; price = 0;
+}
+
+let cash = 500;
+let change = 0;
+
+if(price > 0){
+    change = cash - price;
+    document.write("Order: " + orderName + " = ₱" + price + "<br>");
+    document.write("Cash: ₱" + cash + "<br>");
+    if(change >= 0){
+        document.write("Change: ₱" + change + "<br>");
+    } else {
+        document.write("Not enough cash!<br>");
+    }
+} else {
+    document.write("Invalid order<br>");
+}
+
+</script>
+          
+    
+</body>
+</html>
